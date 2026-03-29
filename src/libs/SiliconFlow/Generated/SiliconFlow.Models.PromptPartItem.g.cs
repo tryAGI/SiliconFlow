@@ -1,0 +1,57 @@
+
+#nullable enable
+
+namespace SiliconFlow
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class PromptPartItem
+    {
+        /// <summary>
+        /// Default Value: &lt;s&gt;[INST] What is the capital of France? [/INST]<br/>
+        /// Example: &lt;s&gt;[INST] What is the capital of France? [/INST]
+        /// </summary>
+        /// <example>&lt;s&gt;[INST] What is the capital of France? [/INST]</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("text")]
+        public string? Text { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("logprobs")]
+        public global::SiliconFlow.LogprobsPart? Logprobs { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PromptPartItem" /> class.
+        /// </summary>
+        /// <param name="text">
+        /// Default Value: &lt;s&gt;[INST] What is the capital of France? [/INST]<br/>
+        /// Example: &lt;s&gt;[INST] What is the capital of France? [/INST]
+        /// </param>
+        /// <param name="logprobs"></param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public PromptPartItem(
+            string? text,
+            global::SiliconFlow.LogprobsPart? logprobs)
+        {
+            this.Text = text;
+            this.Logprobs = logprobs;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PromptPartItem" /> class.
+        /// </summary>
+        public PromptPartItem()
+        {
+        }
+    }
+}

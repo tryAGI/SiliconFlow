@@ -1,0 +1,74 @@
+
+#nullable enable
+
+namespace SiliconFlow
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class ChatCompletionToken
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int Id { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("text")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Text { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("logprob")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required float Logprob { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("special")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool Special { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ChatCompletionToken" /> class.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="text"></param>
+        /// <param name="logprob"></param>
+        /// <param name="special"></param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public ChatCompletionToken(
+            int id,
+            string text,
+            float logprob,
+            bool special)
+        {
+            this.Id = id;
+            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
+            this.Logprob = logprob;
+            this.Special = special;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ChatCompletionToken" /> class.
+        /// </summary>
+        public ChatCompletionToken()
+        {
+        }
+    }
+}
