@@ -124,13 +124,13 @@ namespace SiliconFlow.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::SiliconFlow.ChatCompletionRequestMessageContentPartText?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartText).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TextContentPart, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TextContentPart!, typeInfo);
             }
             else if (value.IsImageContentPart)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::SiliconFlow.ChatCompletionRequestMessageContentPartImage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ImageContentPart, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ImageContentPart!, typeInfo);
             }
         }
     }

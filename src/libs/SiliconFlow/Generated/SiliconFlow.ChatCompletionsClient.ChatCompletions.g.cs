@@ -35,7 +35,6 @@ namespace SiliconFlow
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
-
             request = new global::SiliconFlow.ChatCompletionRequest
             {
                 Model = request.Model,
