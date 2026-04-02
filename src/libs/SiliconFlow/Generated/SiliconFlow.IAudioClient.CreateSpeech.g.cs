@@ -19,6 +19,17 @@ namespace SiliconFlow
         /// Create Speech<br/>
         /// 从输入文本生成音频。根据输入的文本生成音频。接口生成的数据为音频的二进制数据，需要使用者自行处理。参考：https://docs.siliconflow.cn/capabilities/text-to-speech#5
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::SiliconFlow.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::SiliconFlow.AutoSDKHttpResponse<byte[]>> CreateSpeechAsResponseAsync(
+
+            global::SiliconFlow.CreateSpeechRequest request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create Speech<br/>
+        /// 从输入文本生成音频。根据输入的文本生成音频。接口生成的数据为音频的二进制数据，需要使用者自行处理。参考：https://docs.siliconflow.cn/capabilities/text-to-speech#5
+        /// </summary>
         /// <param name="model">
         /// Current available TTS models: `fishaudio/fish-speech-1.4`<br/>
         /// Example: fishaudio/fish-speech-1.4
