@@ -12,8 +12,7 @@ namespace SiliconFlow.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -45,9 +44,7 @@ namespace SiliconFlow.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::SiliconFlow.ChatCompletionRequestMessageContentPartText> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartText).Name}");
-                        textContentPart = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        textContentPart = global::System.Text.Json.JsonSerializer.Deserialize<global::SiliconFlow.ChatCompletionRequestMessageContentPartText>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -60,9 +57,7 @@ namespace SiliconFlow.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::SiliconFlow.ChatCompletionRequestMessageContentPartImage> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage).Name}");
-                        imageContentPart = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        imageContentPart = global::System.Text.Json.JsonSerializer.Deserialize<global::SiliconFlow.ChatCompletionRequestMessageContentPartImage>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -77,9 +72,7 @@ namespace SiliconFlow.JsonConverters
             {
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::SiliconFlow.ChatCompletionRequestMessageContentPartText> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartText).Name}");
-                    textContentPart = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    textContentPart = global::System.Text.Json.JsonSerializer.Deserialize<global::SiliconFlow.ChatCompletionRequestMessageContentPartText>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -90,9 +83,7 @@ namespace SiliconFlow.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::SiliconFlow.ChatCompletionRequestMessageContentPartImage> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage).Name}");
-                    imageContentPart = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    imageContentPart = global::System.Text.Json.JsonSerializer.Deserialize<global::SiliconFlow.ChatCompletionRequestMessageContentPartImage>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -117,20 +108,15 @@ namespace SiliconFlow.JsonConverters
             global::SiliconFlow.ChatCompletionRequestUserMessageContentPart value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsTextContentPart)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::SiliconFlow.ChatCompletionRequestMessageContentPartText?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartText).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TextContentPart!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TextContentPart, typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartText), options);
             }
             else if (value.IsImageContentPart)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::SiliconFlow.ChatCompletionRequestMessageContentPartImage?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ImageContentPart!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ImageContentPart, typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage), options);
             }
         }
     }
