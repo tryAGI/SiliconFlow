@@ -106,13 +106,13 @@ namespace SiliconFlow
                     if (ReadResponseAsString)
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_400 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(string), JsonSerializerContext);
+                        __value_400 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_400, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_400 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(string), JsonSerializerContext);
+                        __value_400 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_400, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -144,13 +144,13 @@ namespace SiliconFlow
                     if (ReadResponseAsString)
                     {
                         __content_401 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_401 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(string), JsonSerializerContext);
+                        __value_401 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_401, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_401 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_401 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(string), JsonSerializerContext);
+                        __value_401 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_401, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -182,13 +182,13 @@ namespace SiliconFlow
                     if (ReadResponseAsString)
                     {
                         __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_404 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_404, typeof(string), JsonSerializerContext);
+                        __value_404 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_404, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_404 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_404, typeof(string), JsonSerializerContext);
+                        __value_404 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_404, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -220,13 +220,13 @@ namespace SiliconFlow
                     if (ReadResponseAsString)
                     {
                         __content_429 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_429 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_429, typeof(string), JsonSerializerContext);
+                        __value_429 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_429, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_429 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_429 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_429, typeof(string), JsonSerializerContext);
+                        __value_429 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_429, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -258,13 +258,13 @@ namespace SiliconFlow
                     if (ReadResponseAsString)
                     {
                         __content_503 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_503 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_503, typeof(string), JsonSerializerContext);
+                        __value_503 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_503, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_503 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_503 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_503, typeof(string), JsonSerializerContext);
+                        __value_503 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_503, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -296,13 +296,13 @@ namespace SiliconFlow
                     if (ReadResponseAsString)
                     {
                         __content_504 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_504 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_504, typeof(string), JsonSerializerContext);
+                        __value_504 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_504, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_504 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_504 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_504, typeof(string), JsonSerializerContext);
+                        __value_504 = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content_504, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -346,7 +346,7 @@ namespace SiliconFlow
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::SiliconFlow.RetrieveAListOfModelsResponse.FromJson(__content, JsonSerializerContext) ??
+                        global::SiliconFlow.RetrieveAListOfModelsResponse.FromJson(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -377,7 +377,7 @@ namespace SiliconFlow
                     ).ConfigureAwait(false);
 
                     return
-                        await global::SiliconFlow.RetrieveAListOfModelsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::SiliconFlow.RetrieveAListOfModelsResponse.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
