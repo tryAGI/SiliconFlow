@@ -5,6 +5,25 @@ namespace SiliconFlow
 {
     public partial class UserInfoClient
     {
+
+
+        private static readonly global::SiliconFlow.EndPointSecurityRequirement s_UserInfoSecurityRequirement0 =
+            new global::SiliconFlow.EndPointSecurityRequirement
+            {
+                Authorizations = new global::SiliconFlow.EndPointAuthorizationRequirement[]
+                {                    new global::SiliconFlow.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::SiliconFlow.EndPointSecurityRequirement[] s_UserInfoSecurityRequirements =
+            new global::SiliconFlow.EndPointSecurityRequirement[]
+            {                s_UserInfoSecurityRequirement0,
+            };
         partial void PrepareUserInfoArguments(
             global::System.Net.Http.HttpClient httpClient);
         partial void PrepareUserInfoRequest(
@@ -33,9 +52,15 @@ namespace SiliconFlow
             PrepareUserInfoArguments(
                 httpClient: HttpClient);
 
+
+            var __authorizations = global::SiliconFlow.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_UserInfoSecurityRequirements,
+                operationName: "UserInfoAsync");
+
             var __pathBuilder = new global::SiliconFlow.PathBuilder(
                 path: "/user/info",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -45,7 +70,7 @@ namespace SiliconFlow
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
