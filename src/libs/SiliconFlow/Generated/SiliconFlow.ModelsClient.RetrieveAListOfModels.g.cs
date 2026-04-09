@@ -5,6 +5,25 @@ namespace SiliconFlow
 {
     public partial class ModelsClient
     {
+
+
+        private static readonly global::SiliconFlow.EndPointSecurityRequirement s_RetrieveAListOfModelsSecurityRequirement0 =
+            new global::SiliconFlow.EndPointSecurityRequirement
+            {
+                Authorizations = new global::SiliconFlow.EndPointAuthorizationRequirement[]
+                {                    new global::SiliconFlow.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::SiliconFlow.EndPointSecurityRequirement[] s_RetrieveAListOfModelsSecurityRequirements =
+            new global::SiliconFlow.EndPointSecurityRequirement[]
+            {                s_RetrieveAListOfModelsSecurityRequirement0,
+            };
         partial void PrepareRetrieveAListOfModelsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::SiliconFlow.RetrieveAListOfModelsType? type,
@@ -43,13 +62,19 @@ namespace SiliconFlow
                 type: ref type,
                 subType: ref subType);
 
+
+            var __authorizations = global::SiliconFlow.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_RetrieveAListOfModelsSecurityRequirements,
+                operationName: "RetrieveAListOfModelsAsync");
+
             var __pathBuilder = new global::SiliconFlow.PathBuilder(
                 path: "/models",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("type", type?.ToValueString())
                 .AddOptionalParameter("sub_type", subType?.ToValueString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -59,7 +84,7 @@ namespace SiliconFlow
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

@@ -5,6 +5,25 @@ namespace SiliconFlow
 {
     public partial class ChatCompletionsClient
     {
+
+
+        private static readonly global::SiliconFlow.EndPointSecurityRequirement s_ChatCompletionsSecurityRequirement0 =
+            new global::SiliconFlow.EndPointSecurityRequirement
+            {
+                Authorizations = new global::SiliconFlow.EndPointAuthorizationRequirement[]
+                {                    new global::SiliconFlow.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::SiliconFlow.EndPointSecurityRequirement[] s_ChatCompletionsSecurityRequirements =
+            new global::SiliconFlow.EndPointSecurityRequirement[]
+            {                s_ChatCompletionsSecurityRequirement0,
+            };
         partial void PrepareChatCompletionsArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::SiliconFlow.ChatCompletionRequest request);
@@ -55,9 +74,15 @@ namespace SiliconFlow
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::SiliconFlow.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ChatCompletionsSecurityRequirements,
+                operationName: "ChatCompletionsAsync");
+
             var __pathBuilder = new global::SiliconFlow.PathBuilder(
                 path: "/chat/completions",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -67,7 +92,7 @@ namespace SiliconFlow
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
