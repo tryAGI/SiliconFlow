@@ -9,11 +9,13 @@ namespace SiliconFlow
         /// Creates a rerank request.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::SiliconFlow.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::SiliconFlow.RerankResponse> CreateRerankAsync(
 
             global::SiliconFlow.RerankRequest request,
+            global::SiliconFlow.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Rerank<br/>
@@ -49,6 +51,7 @@ namespace SiliconFlow
         /// Number of token overlaps between adjacent chunks when documents are chunked.<br/>
         /// Default Value: 80
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::SiliconFlow.RerankResponse> CreateRerankAsync(
@@ -59,6 +62,7 @@ namespace SiliconFlow
             bool? returnDocuments = default,
             int? maxChunksPerDoc = default,
             int? overlapTokens = default,
+            global::SiliconFlow.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

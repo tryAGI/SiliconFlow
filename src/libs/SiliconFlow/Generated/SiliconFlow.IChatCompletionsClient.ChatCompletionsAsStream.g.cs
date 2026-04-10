@@ -9,11 +9,13 @@ namespace SiliconFlow
         /// Creates a model response for the given chat conversation.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::SiliconFlow.ApiException"></exception>
         global::System.Collections.Generic.IAsyncEnumerable<global::SiliconFlow.ChatCompletionStream> ChatCompletionsAsStreamAsync(
 
             global::SiliconFlow.ChatCompletionRequest request,
+            global::SiliconFlow.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Chat Completions<br/>
@@ -62,6 +64,7 @@ namespace SiliconFlow
         /// <param name="responseFormat">
         /// An object specifying the format that the model must output.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Collections.Generic.IAsyncEnumerable<global::SiliconFlow.ChatCompletionStream> ChatCompletionsAsStreamAsync(
@@ -75,6 +78,7 @@ namespace SiliconFlow
             float? frequencyPenalty = default,
             int? n = default,
             global::SiliconFlow.ChatCompletionRequestResponseFormat? responseFormat = default,
+            global::SiliconFlow.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

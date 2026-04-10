@@ -25,6 +25,7 @@ namespace SiliconFlow
             Authorizations.Add(new global::SiliconFlow.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "HttpBearer",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,
