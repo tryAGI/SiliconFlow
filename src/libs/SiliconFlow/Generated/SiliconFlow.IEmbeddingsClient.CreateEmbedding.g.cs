@@ -9,11 +9,13 @@ namespace SiliconFlow
         /// Creates an embedding vector representing the input text.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::SiliconFlow.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::SiliconFlow.EmbeddingsResponse> CreateEmbeddingAsync(
 
             global::SiliconFlow.EmbeddingsRequest request,
+            global::SiliconFlow.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Embeddings<br/>
@@ -33,12 +35,14 @@ namespace SiliconFlow
         /// Default Value: float<br/>
         /// Example: float
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::SiliconFlow.EmbeddingsResponse> CreateEmbeddingAsync(
             global::SiliconFlow.EmbeddingsRequestModel model,
             global::SiliconFlow.OneOf<string, global::System.Collections.Generic.IList<string>> input,
             global::SiliconFlow.EmbeddingsRequestEncodingFormat? encodingFormat = default,
+            global::SiliconFlow.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

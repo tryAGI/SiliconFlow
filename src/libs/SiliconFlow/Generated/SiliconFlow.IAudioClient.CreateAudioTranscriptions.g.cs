@@ -9,11 +9,13 @@ namespace SiliconFlow
         /// Creates an audio transcription.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::SiliconFlow.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::SiliconFlow.AudioResponse> CreateAudioTranscriptionsAsync(
 
             global::SiliconFlow.AudioRequest request,
+            global::SiliconFlow.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Audio Transcriptions<br/>
@@ -31,12 +33,14 @@ namespace SiliconFlow
         /// The name of the audio model to use.<br/>
         /// Example: FunAudioLLM/SenseVoiceSmall
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::SiliconFlow.AudioResponse> CreateAudioTranscriptionsAsync(
             byte[] file,
             string filename,
             global::SiliconFlow.AudioRequestModel model = default,
+            global::SiliconFlow.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
