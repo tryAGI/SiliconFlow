@@ -122,14 +122,14 @@ namespace SiliconFlow
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.Model.ToValueString()}"),
+                                    content: new global::System.Net.Http.StringContent(request.Model.ToValueString()),
                                     name: "\"model\"");
                             }
                             __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent($"{request.CustomName}"),
+                                content: new global::System.Net.Http.StringContent(request.CustomName ?? string.Empty),
                                 name: "\"customName\"");
                             __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent($"{request.Text}"),
+                                content: new global::System.Net.Http.StringContent(request.Text ?? string.Empty),
                                 name: "\"text\"");
                             __httpRequest.Content = __httpRequestContent;
                 global::SiliconFlow.AutoSDKRequestOptionsSupport.ApplyHeaders(
