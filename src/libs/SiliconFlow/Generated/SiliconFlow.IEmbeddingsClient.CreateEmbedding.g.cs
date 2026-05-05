@@ -21,6 +21,19 @@ namespace SiliconFlow
         /// Create Embeddings<br/>
         /// Creates an embedding vector representing the input text.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::SiliconFlow.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::SiliconFlow.AutoSDKHttpResponse<global::SiliconFlow.EmbeddingsResponse>> CreateEmbeddingAsResponseAsync(
+
+            global::SiliconFlow.EmbeddingsRequest request,
+            global::SiliconFlow.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create Embeddings<br/>
+        /// Creates an embedding vector representing the input text.
+        /// </summary>
         /// <param name="model">
         /// The name of the embedding model to use.要使用的 embedding 模型名称。<br/>
         /// Example: BAAI/bge-large-zh-v1.5
