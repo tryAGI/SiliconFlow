@@ -25,6 +25,19 @@ namespace SiliconFlow
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Event))]
 #endif
         public bool IsEvent => Event != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickEvent(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::SiliconFlow.CompletionEvent? value)
+        {
+            value = Event;
+            return IsEvent;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -69,7 +82,7 @@ namespace SiliconFlow
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::SiliconFlow.CompletionEvent?, TResult>? @event = null,
+            global::System.Func<global::SiliconFlow.CompletionEvent, TResult>? @event = null,
             bool validate = true)
         {
             if (validate)
@@ -89,7 +102,25 @@ namespace SiliconFlow
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::SiliconFlow.CompletionEvent?>? @event = null,
+            global::System.Action<global::SiliconFlow.CompletionEvent>? @event = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsEvent)
+            {
+                @event?.Invoke(Event!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::SiliconFlow.CompletionEvent>? @event = null,
             bool validate = true)
         {
             if (validate)

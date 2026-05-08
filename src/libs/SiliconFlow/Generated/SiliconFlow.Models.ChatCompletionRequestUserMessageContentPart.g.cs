@@ -29,6 +29,19 @@ namespace SiliconFlow
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickTextContentPart(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::SiliconFlow.ChatCompletionRequestMessageContentPartText? value)
+        {
+            value = TextContentPart;
+            return IsTextContentPart;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::SiliconFlow.ChatCompletionRequestMessageContentPartImage? ImageContentPart { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace SiliconFlow
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ImageContentPart))]
 #endif
         public bool IsImageContentPart => ImageContentPart != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickImageContentPart(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::SiliconFlow.ChatCompletionRequestMessageContentPartImage? value)
+        {
+            value = ImageContentPart;
+            return IsImageContentPart;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace SiliconFlow
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::SiliconFlow.ChatCompletionRequestMessageContentPartText?, TResult>? textContentPart = null,
-            global::System.Func<global::SiliconFlow.ChatCompletionRequestMessageContentPartImage?, TResult>? imageContentPart = null,
+            global::System.Func<global::SiliconFlow.ChatCompletionRequestMessageContentPartText, TResult>? textContentPart = null,
+            global::System.Func<global::SiliconFlow.ChatCompletionRequestMessageContentPartImage, TResult>? imageContentPart = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace SiliconFlow
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::SiliconFlow.ChatCompletionRequestMessageContentPartText?>? textContentPart = null,
-            global::System.Action<global::SiliconFlow.ChatCompletionRequestMessageContentPartImage?>? imageContentPart = null,
+            global::System.Action<global::SiliconFlow.ChatCompletionRequestMessageContentPartText>? textContentPart = null,
+
+            global::System.Action<global::SiliconFlow.ChatCompletionRequestMessageContentPartImage>? imageContentPart = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsTextContentPart)
+            {
+                textContentPart?.Invoke(TextContentPart!);
+            }
+            else if (IsImageContentPart)
+            {
+                imageContentPart?.Invoke(ImageContentPart!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::SiliconFlow.ChatCompletionRequestMessageContentPartText>? textContentPart = null,
+            global::System.Action<global::SiliconFlow.ChatCompletionRequestMessageContentPartImage>? imageContentPart = null,
             bool validate = true)
         {
             if (validate)
