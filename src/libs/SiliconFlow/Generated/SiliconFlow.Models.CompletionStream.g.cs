@@ -59,6 +59,11 @@ namespace SiliconFlow
         /// <summary>
         /// 
         /// </summary>
+        public static CompletionStream FromEvent(global::SiliconFlow.CompletionEvent? value) => new CompletionStream(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public object? Object =>
             Event as object 
             ;
