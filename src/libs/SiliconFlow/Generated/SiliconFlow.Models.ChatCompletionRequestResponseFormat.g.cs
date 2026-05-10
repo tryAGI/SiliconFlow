@@ -44,5 +44,6 @@ namespace SiliconFlow
         public ChatCompletionRequestResponseFormat()
         {
         }
+
     }
 }

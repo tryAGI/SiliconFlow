@@ -38,6 +38,13 @@ namespace SiliconFlow
             value = Event;
             return IsEvent;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::SiliconFlow.CompletionEvent PickEvent() => IsEvent
+            ? Event!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Event' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

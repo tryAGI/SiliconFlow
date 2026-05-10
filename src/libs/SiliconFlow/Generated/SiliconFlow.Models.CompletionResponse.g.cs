@@ -99,5 +99,6 @@ namespace SiliconFlow
         public CompletionResponse()
         {
         }
+
     }
 }

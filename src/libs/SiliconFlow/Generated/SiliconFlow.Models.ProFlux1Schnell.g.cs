@@ -79,5 +79,6 @@ namespace SiliconFlow
         public ProFlux1Schnell()
         {
         }
+
     }
 }

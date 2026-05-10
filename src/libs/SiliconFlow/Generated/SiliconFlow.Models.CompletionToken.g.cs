@@ -70,5 +70,6 @@ namespace SiliconFlow
         public CompletionToken()
         {
         }
+
     }
 }

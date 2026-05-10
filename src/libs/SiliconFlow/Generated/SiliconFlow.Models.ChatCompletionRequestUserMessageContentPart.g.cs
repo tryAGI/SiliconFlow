@@ -42,6 +42,13 @@ namespace SiliconFlow
         /// <summary>
         /// 
         /// </summary>
+        public global::SiliconFlow.ChatCompletionRequestMessageContentPartText PickTextContentPart() => IsTextContentPart
+            ? TextContentPart!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TextContentPart' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::SiliconFlow.ChatCompletionRequestMessageContentPartImage? ImageContentPart { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace SiliconFlow
             value = ImageContentPart;
             return IsImageContentPart;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::SiliconFlow.ChatCompletionRequestMessageContentPartImage PickImageContentPart() => IsImageContentPart
+            ? ImageContentPart!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ImageContentPart' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
