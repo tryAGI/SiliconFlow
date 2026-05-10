@@ -87,6 +87,7 @@ namespace SiliconFlow.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::SiliconFlow.ChatCompletionRequestMessageContentPartText> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartText).Name}");
                     textContentPart = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -97,9 +98,13 @@ namespace SiliconFlow.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (textContentPart == null && imageContentPart == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::SiliconFlow.ChatCompletionRequestMessageContentPartImage> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage).Name}");
                     imageContentPart = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
