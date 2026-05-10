@@ -89,6 +89,11 @@ namespace SiliconFlow
         /// <summary>
         /// 
         /// </summary>
+        public static ChatCompletionRequestUserMessageContentPart FromTextContentPart(global::SiliconFlow.ChatCompletionRequestMessageContentPartText? value) => new ChatCompletionRequestUserMessageContentPart(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ChatCompletionRequestUserMessageContentPart(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage value) => new ChatCompletionRequestUserMessageContentPart((global::SiliconFlow.ChatCompletionRequestMessageContentPartImage?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace SiliconFlow
         {
             ImageContentPart = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChatCompletionRequestUserMessageContentPart FromImageContentPart(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage? value) => new ChatCompletionRequestUserMessageContentPart(value);
 
         /// <summary>
         /// 
