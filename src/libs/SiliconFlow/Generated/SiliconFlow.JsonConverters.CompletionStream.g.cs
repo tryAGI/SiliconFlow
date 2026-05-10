@@ -69,6 +69,7 @@ namespace SiliconFlow.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::SiliconFlow.CompletionEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::SiliconFlow.CompletionEvent> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::SiliconFlow.CompletionEvent).Name}");
                     @event = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
