@@ -78,5 +78,6 @@ namespace SiliconFlow
         public EmbeddingsResponse()
         {
         }
+
     }
 }

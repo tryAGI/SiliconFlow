@@ -52,5 +52,6 @@ namespace SiliconFlow
         public LogprobsPart()
         {
         }
+
     }
 }

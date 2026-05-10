@@ -60,5 +60,6 @@ namespace SiliconFlow
         public RerankResponse()
         {
         }
+
     }
 }

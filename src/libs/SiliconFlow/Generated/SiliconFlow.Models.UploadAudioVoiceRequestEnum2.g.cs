@@ -58,5 +58,6 @@ namespace SiliconFlow
         public UploadAudioVoiceRequestEnum2()
         {
         }
+
     }
 }

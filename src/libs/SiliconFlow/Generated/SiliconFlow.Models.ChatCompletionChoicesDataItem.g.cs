@@ -49,5 +49,6 @@ namespace SiliconFlow
         public ChatCompletionChoicesDataItem()
         {
         }
+
     }
 }
