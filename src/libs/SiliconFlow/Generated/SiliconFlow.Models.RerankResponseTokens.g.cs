@@ -48,5 +48,6 @@ namespace SiliconFlow
         public RerankResponseTokens()
         {
         }
+
     }
 }

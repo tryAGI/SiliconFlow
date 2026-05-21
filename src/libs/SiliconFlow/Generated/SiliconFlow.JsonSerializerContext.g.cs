@@ -304,6 +304,7 @@ namespace SiliconFlow
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::SiliconFlow.RetrieveAListOfModelsResponseDataItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SiliconFlow.RetrieveAListOfModelsResponseDataItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SiliconFlow.UploadAudioVoiceResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SiliconFlow.OneOf<global::SiliconFlow.StableDiffusion35Large, global::SiliconFlow.Flux1Schnell, global::SiliconFlow.ProFlux1Schnell, global::SiliconFlow.Flux1Dev, global::SiliconFlow.StableDiffusion3Medium, global::SiliconFlow.StableDiffusionXlBase10, global::SiliconFlow.StableDiffusion21>?), TypeInfoPropertyName = "StableDiffusion21_d7a998d303d7ed06")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::SiliconFlow.OneOf<string, global::System.Collections.Generic.List<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::SiliconFlow.EmbeddingsResponseDataItem>))]

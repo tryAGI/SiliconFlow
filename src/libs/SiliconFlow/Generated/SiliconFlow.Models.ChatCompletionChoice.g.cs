@@ -50,5 +50,6 @@ namespace SiliconFlow
         public ChatCompletionChoice()
         {
         }
+
     }
 }

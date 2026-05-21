@@ -85,5 +85,6 @@ namespace SiliconFlow
         public ChatCompletionResponse()
         {
         }
+
     }
 }

@@ -162,5 +162,6 @@ namespace SiliconFlow
         public UserInfoResponseData()
         {
         }
+
     }
 }

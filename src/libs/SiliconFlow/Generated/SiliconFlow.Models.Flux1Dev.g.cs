@@ -93,5 +93,6 @@ namespace SiliconFlow
         public Flux1Dev()
         {
         }
+
     }
 }

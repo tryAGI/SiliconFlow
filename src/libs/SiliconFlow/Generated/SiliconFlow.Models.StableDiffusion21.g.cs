@@ -135,5 +135,6 @@ namespace SiliconFlow
         public StableDiffusion21()
         {
         }
+
     }
 }

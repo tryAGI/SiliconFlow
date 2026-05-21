@@ -55,5 +55,18 @@ namespace SiliconFlow
         public ChatCompletionRequestMessageContentPartImage()
         {
         }
+
+        /// <summary>
+        /// Creates a new <see cref="ChatCompletionRequestMessageContentPartImage"/> from its single non-const required field,
+        /// hardcoding any const discriminator fields.
+        /// </summary>
+        public static ChatCompletionRequestMessageContentPartImage FromImageUrl(global::SiliconFlow.ChatCompletionRequestMessageContentPartImageImageUrl imageUrl)
+        {
+            return new ChatCompletionRequestMessageContentPartImage
+            {
+                ImageUrl = imageUrl,
+            };
+        }
+
     }
 }
