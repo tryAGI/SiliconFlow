@@ -95,7 +95,7 @@ internal static partial class UploadAudioVoiceCommandApiCommand
                             RequestFile,
                             global::SiliconFlow.SourceGenerationContext.Default,
                             cancellationToken).ConfigureAwait(false);
-                        var model = CliRuntime.WasSpecified(parseResult, Model) ? parseResult.GetValue(Model) : __requestBase is not null ? __requestBase.Model : default;
+                        var model = CliRuntime.WasSpecified(parseResult, Model) ? parseResult.GetValue(Model) : (__requestBase is { } __ModelBaseValue ? __ModelBaseValue.Model : default);
                         var customName = parseResult.GetRequiredValue(CustomName);
                         var text = parseResult.GetRequiredValue(Text);
                 using var client = await CliRuntime.CreateClientAsync(parseResult, cancellationToken).ConfigureAwait(false);
