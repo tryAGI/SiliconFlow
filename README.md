@@ -19,6 +19,13 @@ using SiliconFlow;
 using var client = new SiliconFlowClient(apiKey);
 ```
 
+### CLI
+
+```bash
+dotnet tool install --global SiliconFlow.CLI --prerelease
+silicon-flow api --help
+```
+
 <!-- EXAMPLES:START -->
 <!-- EXAMPLES:END -->
 
