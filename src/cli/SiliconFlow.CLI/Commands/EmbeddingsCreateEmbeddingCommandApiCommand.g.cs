@@ -100,7 +100,7 @@ Creates an embedding vector representing the input text.");
                             cancellationToken).ConfigureAwait(false);
                         var model = parseResult.GetRequiredValue(Model);
                         var input = parseResult.GetRequiredValue(InputOption);
-                        var encodingFormat = CliRuntime.WasSpecified(parseResult, EncodingFormat) ? parseResult.GetValue(EncodingFormat) : __requestBase is not null ? __requestBase.EncodingFormat : default;
+                        var encodingFormat = CliRuntime.WasSpecified(parseResult, EncodingFormat) ? parseResult.GetValue(EncodingFormat) : (__requestBase is { } __EncodingFormatBaseValue ? __EncodingFormatBaseValue.EncodingFormat : default);
                 using var client = await CliRuntime.CreateClientAsync(parseResult, cancellationToken).ConfigureAwait(false);
 
 
