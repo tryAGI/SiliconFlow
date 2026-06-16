@@ -106,16 +106,16 @@ Creates a model response for the given chat conversation.");
                         var frequencyPenalty = CliRuntime.WasSpecified(parseResult, ChatCompletionRequestOptionSetOptions.FrequencyPenalty) ? parseResult.GetValue(ChatCompletionRequestOptionSetOptions.FrequencyPenalty) : (__requestBase is { } __FrequencyPenaltyBaseValue ? __FrequencyPenaltyBaseValue.FrequencyPenalty : default);
                         var n = CliRuntime.WasSpecified(parseResult, ChatCompletionRequestOptionSetOptions.N) ? parseResult.GetValue(ChatCompletionRequestOptionSetOptions.N) : (__requestBase is { } __NBaseValue ? __NBaseValue.N : default);
 
-                        var __responseFormatBase = __requestBase is { } __ResponseFormatBaseValue ? __ResponseFormatBaseValue.ResponseFormat : default;                        var responseFormatType = CliRuntime.WasSpecified(parseResult, ResponseFormatOptions.Type) ? parseResult.GetValue(ResponseFormatOptions.Type) : (__responseFormatBase is { } __ResponseFormattypeBaseValue ? __ResponseFormattypeBaseValue.Type : default);
-                        var __responseFormatSpecified = CliRuntime.WasSpecified(parseResult, ResponseFormatOptions.Type);
+                        var __ResponseFormatBase = __requestBase is { } __ResponseFormatBaseValue ? __ResponseFormatBaseValue.ResponseFormat : default;                        var responseFormatType = CliRuntime.WasSpecified(parseResult, ResponseFormatOptions.Type) ? parseResult.GetValue(ResponseFormatOptions.Type) : (__ResponseFormatBase is { } __ResponseFormattypeBaseValue ? __ResponseFormattypeBaseValue.Type : default);
+                        var __ResponseFormatSpecified = CliRuntime.WasSpecified(parseResult, ResponseFormatOptions.Type);
                         var responseFormat =
-                            __responseFormatSpecified || __responseFormatBase is not null
+                            __ResponseFormatSpecified || __ResponseFormatBase is not null
                                 ? new global::SiliconFlow.ChatCompletionRequestResponseFormat
                                 {
 	                                Type = responseFormatType,
 
                                 }
-                                : __responseFormatBase;
+                                : __ResponseFormatBase;
                 using var client = await CliRuntime.CreateClientAsync(parseResult, cancellationToken).ConfigureAwait(false);
 
 
