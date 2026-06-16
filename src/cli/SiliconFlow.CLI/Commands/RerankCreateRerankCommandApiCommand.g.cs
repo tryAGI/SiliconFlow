@@ -125,10 +125,10 @@ Creates a rerank request.");
                         var model = parseResult.GetRequiredValue(Model);
                         var query = parseResult.GetRequiredValue(Query);
                         var documents = parseResult.GetRequiredValue(Documents);
-                        var topN = CliRuntime.WasSpecified(parseResult, TopN) ? parseResult.GetValue(TopN) : __requestBase is not null ? __requestBase.TopN : default;
-                        var returnDocuments = CliRuntime.WasSpecified(parseResult, ReturnDocuments) ? parseResult.GetValue(ReturnDocuments) : __requestBase is not null ? __requestBase.ReturnDocuments : default;
-                        var maxChunksPerDoc = CliRuntime.WasSpecified(parseResult, MaxChunksPerDoc) ? parseResult.GetValue(MaxChunksPerDoc) : __requestBase is not null ? __requestBase.MaxChunksPerDoc : default;
-                        var overlapTokens = CliRuntime.WasSpecified(parseResult, OverlapTokens) ? parseResult.GetValue(OverlapTokens) : __requestBase is not null ? __requestBase.OverlapTokens : default;
+                        var topN = CliRuntime.WasSpecified(parseResult, TopN) ? parseResult.GetValue(TopN) : (__requestBase is { } __TopNBaseValue ? __TopNBaseValue.TopN : default);
+                        var returnDocuments = CliRuntime.WasSpecified(parseResult, ReturnDocuments) ? parseResult.GetValue(ReturnDocuments) : (__requestBase is { } __ReturnDocumentsBaseValue ? __ReturnDocumentsBaseValue.ReturnDocuments : default);
+                        var maxChunksPerDoc = CliRuntime.WasSpecified(parseResult, MaxChunksPerDoc) ? parseResult.GetValue(MaxChunksPerDoc) : (__requestBase is { } __MaxChunksPerDocBaseValue ? __MaxChunksPerDocBaseValue.MaxChunksPerDoc : default);
+                        var overlapTokens = CliRuntime.WasSpecified(parseResult, OverlapTokens) ? parseResult.GetValue(OverlapTokens) : (__requestBase is { } __OverlapTokensBaseValue ? __OverlapTokensBaseValue.OverlapTokens : default);
                 using var client = await CliRuntime.CreateClientAsync(parseResult, cancellationToken).ConfigureAwait(false);
 
 

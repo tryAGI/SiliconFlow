@@ -97,7 +97,7 @@ Creates an audio transcription.");
                             cancellationToken).ConfigureAwait(false);
                         var file = parseResult.GetRequiredValue(File);
                         var filename = parseResult.GetRequiredValue(Filename);
-                        var model = CliRuntime.WasSpecified(parseResult, Model) ? parseResult.GetValue(Model) : __requestBase is not null ? __requestBase.Model : default;
+                        var model = CliRuntime.WasSpecified(parseResult, Model) ? parseResult.GetValue(Model) : (__requestBase is { } __ModelBaseValue ? __ModelBaseValue.Model : default);
                 using var client = await CliRuntime.CreateClientAsync(parseResult, cancellationToken).ConfigureAwait(false);
 
 
