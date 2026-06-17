@@ -17,6 +17,14 @@ namespace SiliconFlow
         }
 
         /// <summary>
+        /// Serializes the current instance to a JSON string using the generated default JsonSerializerContext.
+        /// </summary>
+        public string ToJson()
+        {
+            return ToJson(global::SiliconFlow.SourceGenerationContext.Default);
+        }
+
+        /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
         /// </summary>
 #if NET8_0_OR_GREATER
@@ -26,6 +34,11 @@ namespace SiliconFlow
         public string ToJson(
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
+            if (jsonSerializerOptions is null)
+            {
+                return ToJson(global::SiliconFlow.SourceGenerationContext.Default);
+            }
+
             return global::System.Text.Json.JsonSerializer.Serialize(
                 this,
                 jsonSerializerOptions);
@@ -45,6 +58,17 @@ namespace SiliconFlow
         }
 
         /// <summary>
+        /// Deserializes a JSON string using the generated default JsonSerializerContext.
+        /// </summary>
+        public static global::SiliconFlow.Flux1Dev? FromJson(
+            string json)
+        {
+            return FromJson(
+                json,
+                global::SiliconFlow.SourceGenerationContext.Default);
+        }
+
+        /// <summary>
         /// Deserializes a JSON string using the provided JsonSerializerOptions.
         /// </summary>
 #if NET8_0_OR_GREATER
@@ -55,6 +79,13 @@ namespace SiliconFlow
             string json,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
+            if (jsonSerializerOptions is null)
+            {
+                return FromJson(
+                    json,
+                    global::SiliconFlow.SourceGenerationContext.Default);
+            }
+
             return global::System.Text.Json.JsonSerializer.Deserialize<global::SiliconFlow.Flux1Dev>(
                 json,
                 jsonSerializerOptions);
@@ -74,6 +105,17 @@ namespace SiliconFlow
         }
 
         /// <summary>
+        /// Deserializes a JSON stream using the generated default JsonSerializerContext.
+        /// </summary>
+        public static global::System.Threading.Tasks.ValueTask<global::SiliconFlow.Flux1Dev?> FromJsonStreamAsync(
+            global::System.IO.Stream jsonStream)
+        {
+            return FromJsonStreamAsync(
+                jsonStream,
+                global::SiliconFlow.SourceGenerationContext.Default);
+        }
+
+        /// <summary>
         /// Deserializes a JSON stream using the provided JsonSerializerOptions.
         /// </summary>
 #if NET8_0_OR_GREATER
@@ -84,6 +126,13 @@ namespace SiliconFlow
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
+            if (jsonSerializerOptions is null)
+            {
+                return FromJsonStreamAsync(
+                    jsonStream,
+                    global::SiliconFlow.SourceGenerationContext.Default);
+            }
+
             return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::SiliconFlow.Flux1Dev?>(
                 jsonStream,
                 jsonSerializerOptions);
