@@ -40,43 +40,43 @@ namespace SiliconFlow
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AudioClient Audio { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionsClient ChatCompletions { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EmbeddingsClient Embeddings { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ImageClient Image { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ModelsClient Models { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RerankClient Rerank { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UserInfoClient UserInfo { get; }
 

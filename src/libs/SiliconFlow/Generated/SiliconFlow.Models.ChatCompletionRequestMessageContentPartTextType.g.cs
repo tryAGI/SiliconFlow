@@ -10,7 +10,7 @@ namespace SiliconFlow
     public enum ChatCompletionRequestMessageContentPartTextType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

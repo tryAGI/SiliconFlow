@@ -4,36 +4,36 @@
 namespace SiliconFlow
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum RetrieveAListOfModelsSubType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Embedding,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageToImage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Reranker,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpeechToText,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextToImage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextToVideo,
     }

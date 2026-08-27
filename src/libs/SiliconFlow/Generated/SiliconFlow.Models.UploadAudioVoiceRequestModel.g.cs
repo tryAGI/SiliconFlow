@@ -10,7 +10,7 @@ namespace SiliconFlow
     public enum UploadAudioVoiceRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FishaudioFishSpeech14,
     }

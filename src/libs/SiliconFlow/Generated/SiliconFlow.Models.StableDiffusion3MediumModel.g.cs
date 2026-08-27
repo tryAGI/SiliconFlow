@@ -9,7 +9,7 @@ namespace SiliconFlow
     public enum StableDiffusion3MediumModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StabilityaiStableDiffusion3Medium,
     }

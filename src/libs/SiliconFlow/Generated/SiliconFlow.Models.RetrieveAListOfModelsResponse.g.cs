@@ -4,7 +4,7 @@
 namespace SiliconFlow
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class RetrieveAListOfModelsResponse
     {
@@ -16,7 +16,7 @@ namespace SiliconFlow
         public string? Object { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
         public global::System.Collections.Generic.IList<global::SiliconFlow.RetrieveAListOfModelsResponseDataItem>? Data { get; set; }

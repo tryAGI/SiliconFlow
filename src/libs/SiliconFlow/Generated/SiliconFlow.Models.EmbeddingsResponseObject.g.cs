@@ -9,7 +9,7 @@ namespace SiliconFlow
     public enum EmbeddingsResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         list,
     }

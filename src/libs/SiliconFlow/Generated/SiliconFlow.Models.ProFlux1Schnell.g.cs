@@ -4,7 +4,7 @@
 namespace SiliconFlow
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ProFlux1Schnell
     {
@@ -34,7 +34,7 @@ namespace SiliconFlow
         public required global::SiliconFlow.ProFlux1SchnellImageSize ImageSize { get; set; } = global::SiliconFlow.ProFlux1SchnellImageSize.x1024x1024;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("seed")]
         public long? Seed { get; set; }

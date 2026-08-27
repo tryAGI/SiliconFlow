@@ -9,7 +9,7 @@ namespace SiliconFlow
     public enum Flux1SchnellModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BlackForestLabsFlux1Schnell,
     }

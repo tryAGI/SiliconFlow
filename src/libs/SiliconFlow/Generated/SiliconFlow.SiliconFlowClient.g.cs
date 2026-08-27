@@ -11,7 +11,7 @@ namespace SiliconFlow
     public sealed partial class SiliconFlowClient : global::SiliconFlow.ISiliconFlowClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://api.siliconflow.cn/v1";
 
@@ -38,7 +38,7 @@ namespace SiliconFlow
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::SiliconFlow.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -48,7 +48,7 @@ namespace SiliconFlow
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AudioClient Audio => new AudioClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -57,7 +57,7 @@ namespace SiliconFlow
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionsClient ChatCompletions => new ChatCompletionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -66,7 +66,7 @@ namespace SiliconFlow
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EmbeddingsClient Embeddings => new EmbeddingsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -75,7 +75,7 @@ namespace SiliconFlow
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ImageClient Image => new ImageClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -84,7 +84,7 @@ namespace SiliconFlow
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ModelsClient Models => new ModelsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -93,7 +93,7 @@ namespace SiliconFlow
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RerankClient Rerank => new RerankClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -102,7 +102,7 @@ namespace SiliconFlow
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UserInfoClient UserInfo => new UserInfoClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

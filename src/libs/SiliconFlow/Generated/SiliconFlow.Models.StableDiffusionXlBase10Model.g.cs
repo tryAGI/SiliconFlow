@@ -9,7 +9,7 @@ namespace SiliconFlow
     public enum StableDiffusionXlBase10Model
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StabilityaiStableDiffusionXlBase10,
     }

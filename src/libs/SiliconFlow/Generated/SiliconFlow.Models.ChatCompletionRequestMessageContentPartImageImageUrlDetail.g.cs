@@ -10,15 +10,15 @@ namespace SiliconFlow
     public enum ChatCompletionRequestMessageContentPartImageImageUrlDetail
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auto,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         High,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Low,
     }

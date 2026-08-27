@@ -9,7 +9,7 @@ namespace SiliconFlow
     public enum ProFlux1SchnellModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProBlackForestLabsFlux1Schnell,
     }
