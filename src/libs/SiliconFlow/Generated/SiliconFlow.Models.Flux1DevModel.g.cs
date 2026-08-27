@@ -10,7 +10,7 @@ namespace SiliconFlow
     public enum Flux1DevModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BlackForestLabsFlux1Dev,
     }

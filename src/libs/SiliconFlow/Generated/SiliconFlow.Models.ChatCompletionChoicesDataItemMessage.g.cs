@@ -4,7 +4,7 @@
 namespace SiliconFlow
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatCompletionChoicesDataItemMessage
     {
@@ -16,7 +16,7 @@ namespace SiliconFlow
         public string? Role { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content")]
         public string? Content { get; set; }

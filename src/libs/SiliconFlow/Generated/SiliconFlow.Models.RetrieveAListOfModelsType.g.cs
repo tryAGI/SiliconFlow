@@ -4,24 +4,24 @@
 namespace SiliconFlow
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum RetrieveAListOfModelsType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Audio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Image,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Video,
     }

@@ -4,7 +4,7 @@
 namespace SiliconFlow
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PromptPartItem
     {
@@ -17,7 +17,7 @@ namespace SiliconFlow
         public string? Text { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("logprobs")]
         public global::SiliconFlow.LogprobsPart? Logprobs { get; set; }

@@ -20,7 +20,7 @@ namespace SiliconFlow.JsonConverters
                     {
                         return global::SiliconFlow.StableDiffusionXlBase10ImageSizeExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

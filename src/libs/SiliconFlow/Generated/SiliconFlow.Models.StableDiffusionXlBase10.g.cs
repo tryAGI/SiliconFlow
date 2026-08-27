@@ -4,7 +4,7 @@
 namespace SiliconFlow
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class StableDiffusionXlBase10
     {
@@ -25,7 +25,7 @@ namespace SiliconFlow
         public required string Prompt { get; set; } = "an island near sea, with seagulls, moon shining over the sea, light house, boats int he background, fish flying over the sea";
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("negative_prompt")]
         public string? NegativePrompt { get; set; }
@@ -47,7 +47,7 @@ namespace SiliconFlow
         public required int BatchSize { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("seed")]
         public long? Seed { get; set; }

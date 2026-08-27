@@ -20,7 +20,7 @@ namespace SiliconFlow.JsonConverters
                     {
                         return global::SiliconFlow.ChatCompletionRequestMessageContentPartImageTypeExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

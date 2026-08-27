@@ -20,7 +20,7 @@ namespace SiliconFlow.JsonConverters
                     {
                         return global::SiliconFlow.ProFlux1SchnellModelExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

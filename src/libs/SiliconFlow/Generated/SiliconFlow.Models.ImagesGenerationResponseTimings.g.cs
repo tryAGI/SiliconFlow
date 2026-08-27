@@ -4,12 +4,12 @@
 namespace SiliconFlow
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ImagesGenerationResponseTimings
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("inference")]
         public float? Inference { get; set; }

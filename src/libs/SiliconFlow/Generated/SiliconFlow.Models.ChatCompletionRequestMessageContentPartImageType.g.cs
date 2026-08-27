@@ -10,7 +10,7 @@ namespace SiliconFlow
     public enum ChatCompletionRequestMessageContentPartImageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageUrl,
     }

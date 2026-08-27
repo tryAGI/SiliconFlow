@@ -4,7 +4,7 @@
 namespace SiliconFlow
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class RetrieveAListOfModelsResponseDataItem
     {
@@ -30,7 +30,7 @@ namespace SiliconFlow
         public int? Created { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("owned_by")]
         public string? OwnedBy { get; set; }

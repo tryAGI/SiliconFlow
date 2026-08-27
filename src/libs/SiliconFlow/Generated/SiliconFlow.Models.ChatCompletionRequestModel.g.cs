@@ -11,195 +11,195 @@ namespace SiliconFlow
     public enum ChatCompletionRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x01AiYi1534bChat16k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x01AiYi156bChat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x01AiYi159bChat16k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OpenGVLabInternVL226b,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OpenGVLabInternVL2Llama376b,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pro01AiYi156bChat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pro01AiYi159bChat16k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProOpenGVLabInternVL28b,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProQwenQwen215bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProQwenQwen27bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProQwenQwen2Vl7bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProQwenQwen257bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProThudmChatglm36b,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProThudmGlm49bChat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProGoogleGemma29bIt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProInternlmInternlm257bChat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProMetaLlamaMetaLlama38bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProMetaLlamaMetaLlama318bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QwenQwen215bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QwenQwen257bA14bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QwenQwen272bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QwenQwen27bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QwenQwen2Vl72bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QwenQwen2514bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QwenQwen2532bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QwenQwen2572bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QwenQwen2572bInstruct128k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QwenQwen257bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QwenQwen25Coder7bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         QwenQwen25Math72bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThudmChatglm36b,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThudmGlm49bChat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TeleAITeleChat2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VendorAQwenQwen272bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VendorAQwenQwen2572bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeepseekAiDeepSeekCoderV2Instruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeepseekAiDeepSeekV2Chat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeepseekAiDeepSeekV25,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleGemma227bIt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleGemma29bIt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InternlmInternlm2520bChat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InternlmInternlm257bChat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MetaLlamaMetaLlama370bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MetaLlamaMetaLlama38bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MetaLlamaMetaLlama31405bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MetaLlamaMetaLlama3170bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MetaLlamaMetaLlama318bInstruct,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NvidiaLlama31Nemotron70bInstruct,
     }

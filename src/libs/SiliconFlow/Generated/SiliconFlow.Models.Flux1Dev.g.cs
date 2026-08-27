@@ -4,7 +4,7 @@
 namespace SiliconFlow
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Flux1Dev
     {
@@ -35,7 +35,7 @@ namespace SiliconFlow
         public required global::SiliconFlow.Flux1DevImageSize ImageSize { get; set; } = global::SiliconFlow.Flux1DevImageSize.x1024x1024;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("seed")]
         public long? Seed { get; set; }

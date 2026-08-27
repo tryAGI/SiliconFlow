@@ -9,27 +9,27 @@ namespace SiliconFlow
     public enum StableDiffusion3MediumImageSize
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x1024x1024,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x720x1280,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x720x1440,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x768x1024,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x960x1280,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Others,
     }

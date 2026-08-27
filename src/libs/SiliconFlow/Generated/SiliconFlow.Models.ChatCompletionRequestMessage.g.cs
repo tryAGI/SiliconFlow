@@ -4,7 +4,7 @@
 namespace SiliconFlow
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatCompletionRequestMessage
     {
@@ -21,7 +21,7 @@ namespace SiliconFlow
         public required global::SiliconFlow.ChatCompletionRequestMessageRole Role { get; set; } = global::SiliconFlow.ChatCompletionRequestMessageRole.User;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::SiliconFlow.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::SiliconFlow.ChatCompletionRequestUserMessageContentPart>>))]

@@ -10,23 +10,23 @@ namespace SiliconFlow
     public enum EmbeddingsRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BaaiBgeLargeEnV15,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BaaiBgeLargeZhV15,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BaaiBgeM3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProBaaiBgeM3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NeteaseYoudaoBceEmbeddingBaseV1,
     }

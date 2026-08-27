@@ -10,7 +10,7 @@ namespace SiliconFlow
     public enum AudioRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FunAudioLLMSenseVoiceSmall,
     }

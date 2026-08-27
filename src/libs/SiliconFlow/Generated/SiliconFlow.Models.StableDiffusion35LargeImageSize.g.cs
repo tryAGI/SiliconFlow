@@ -9,27 +9,27 @@ namespace SiliconFlow
     public enum StableDiffusion35LargeImageSize
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x1024x1024,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x1024x576,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x512x1024,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x576x1024,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x768x1024,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x768x512,
     }

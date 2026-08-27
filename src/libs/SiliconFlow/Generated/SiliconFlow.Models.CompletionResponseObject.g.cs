@@ -4,12 +4,12 @@
 namespace SiliconFlow
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CompletionResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextCompletion,
     }

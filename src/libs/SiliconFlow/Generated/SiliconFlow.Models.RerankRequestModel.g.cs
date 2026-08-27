@@ -10,11 +10,11 @@ namespace SiliconFlow
     public enum RerankRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BaaiBgeRerankerV2M3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NeteaseYoudaoBceRerankerBaseV1,
     }

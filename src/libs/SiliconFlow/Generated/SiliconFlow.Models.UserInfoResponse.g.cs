@@ -4,7 +4,7 @@
 namespace SiliconFlow
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UserInfoResponse
     {
@@ -30,7 +30,7 @@ namespace SiliconFlow
         public bool? Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
         public global::SiliconFlow.UserInfoResponseData? Data { get; set; }

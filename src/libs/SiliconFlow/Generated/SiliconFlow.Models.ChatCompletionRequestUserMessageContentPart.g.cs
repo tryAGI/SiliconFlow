@@ -5,12 +5,12 @@
 namespace SiliconFlow
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct ChatCompletionRequestUserMessageContentPart : global::System.IEquatable<ChatCompletionRequestUserMessageContentPart>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::SiliconFlow.ChatCompletionRequestMessageContentPartText? TextContentPart { get; init; }
@@ -19,7 +19,7 @@ namespace SiliconFlow
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TextContentPart))]
@@ -27,7 +27,7 @@ namespace SiliconFlow
         public bool IsTextContentPart => TextContentPart != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTextContentPart(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace SiliconFlow
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::SiliconFlow.ChatCompletionRequestMessageContentPartText PickTextContentPart() => IsTextContentPart
             ? TextContentPart!
             : throw new global::System.InvalidOperationException($"Expected union variant 'TextContentPart' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::SiliconFlow.ChatCompletionRequestMessageContentPartImage? ImageContentPart { get; init; }
@@ -56,7 +56,7 @@ namespace SiliconFlow
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ImageContentPart))]
@@ -64,7 +64,7 @@ namespace SiliconFlow
         public bool IsImageContentPart => ImageContentPart != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickImageContentPart(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace SiliconFlow
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::SiliconFlow.ChatCompletionRequestMessageContentPartImage PickImageContentPart() => IsImageContentPart
             ? ImageContentPart!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ImageContentPart' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionRequestUserMessageContentPart(global::SiliconFlow.ChatCompletionRequestMessageContentPartText value) => new ChatCompletionRequestUserMessageContentPart((global::SiliconFlow.ChatCompletionRequestMessageContentPartText?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::SiliconFlow.ChatCompletionRequestMessageContentPartText?(ChatCompletionRequestUserMessageContentPart @this) => @this.TextContentPart;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionRequestUserMessageContentPart(global::SiliconFlow.ChatCompletionRequestMessageContentPartText? value)
         {
@@ -101,22 +101,22 @@ namespace SiliconFlow
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionRequestUserMessageContentPart FromTextContentPart(global::SiliconFlow.ChatCompletionRequestMessageContentPartText? value) => new ChatCompletionRequestUserMessageContentPart(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionRequestUserMessageContentPart(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage value) => new ChatCompletionRequestUserMessageContentPart((global::SiliconFlow.ChatCompletionRequestMessageContentPartImage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::SiliconFlow.ChatCompletionRequestMessageContentPartImage?(ChatCompletionRequestUserMessageContentPart @this) => @this.ImageContentPart;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionRequestUserMessageContentPart(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage? value)
         {
@@ -124,12 +124,12 @@ namespace SiliconFlow
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionRequestUserMessageContentPart FromImageContentPart(global::SiliconFlow.ChatCompletionRequestMessageContentPartImage? value) => new ChatCompletionRequestUserMessageContentPart(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionRequestUserMessageContentPart(
             global::SiliconFlow.ChatCompletionRequestMessageContentPartText? textContentPart,
@@ -141,23 +141,23 @@ namespace SiliconFlow
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             ImageContentPart as object ??
-            TextContentPart as object 
+            TextContentPart as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             TextContentPart?.ToString() ??
-            ImageContentPart?.ToString() 
+            ImageContentPart?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace SiliconFlow
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::SiliconFlow.ChatCompletionRequestMessageContentPartText, TResult>? textContentPart = null,
@@ -190,7 +190,7 @@ namespace SiliconFlow
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::SiliconFlow.ChatCompletionRequestMessageContentPartText>? textContentPart = null,
@@ -214,7 +214,7 @@ namespace SiliconFlow
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::SiliconFlow.ChatCompletionRequestMessageContentPartText>? textContentPart = null,
@@ -237,7 +237,7 @@ namespace SiliconFlow
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace SiliconFlow
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(ChatCompletionRequestUserMessageContentPart other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::SiliconFlow.ChatCompletionRequestMessageContentPartText?>.Default.Equals(TextContentPart, other.TextContentPart) &&
-                global::System.Collections.Generic.EqualityComparer<global::SiliconFlow.ChatCompletionRequestMessageContentPartImage?>.Default.Equals(ImageContentPart, other.ImageContentPart) 
+                global::System.Collections.Generic.EqualityComparer<global::SiliconFlow.ChatCompletionRequestMessageContentPartImage?>.Default.Equals(ImageContentPart, other.ImageContentPart)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(ChatCompletionRequestUserMessageContentPart obj1, ChatCompletionRequestUserMessageContentPart obj2)
         {
@@ -277,7 +277,7 @@ namespace SiliconFlow
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(ChatCompletionRequestUserMessageContentPart obj1, ChatCompletionRequestUserMessageContentPart obj2)
         {
@@ -285,7 +285,7 @@ namespace SiliconFlow
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {
