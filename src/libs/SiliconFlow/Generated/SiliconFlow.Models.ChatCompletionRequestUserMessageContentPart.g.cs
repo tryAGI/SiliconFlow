@@ -42,8 +42,8 @@ namespace SiliconFlow
         /// <summary>
         ///
         /// </summary>
-        public global::SiliconFlow.ChatCompletionRequestMessageContentPartText PickTextContentPart() => IsTextContentPart
-            ? TextContentPart!
+        public global::SiliconFlow.ChatCompletionRequestMessageContentPartText PickTextContentPart() => TextContentPart is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'TextContentPart' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace SiliconFlow
         /// <summary>
         ///
         /// </summary>
-        public global::SiliconFlow.ChatCompletionRequestMessageContentPartImage PickImageContentPart() => IsImageContentPart
-            ? ImageContentPart!
+        public global::SiliconFlow.ChatCompletionRequestMessageContentPartImage PickImageContentPart() => ImageContentPart is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ImageContentPart' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace SiliconFlow
                 Validate();
             }
 
-            if (IsTextContentPart && textContentPart != null)
+            if (TextContentPart is { } __value0 && textContentPart != null)
             {
-                return textContentPart(TextContentPart!);
+                return textContentPart(__value0);
             }
-            else if (IsImageContentPart && imageContentPart != null)
+            else if (ImageContentPart is { } __value1 && imageContentPart != null)
             {
-                return imageContentPart(ImageContentPart!);
+                return imageContentPart(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace SiliconFlow
                 Validate();
             }
 
-            if (IsTextContentPart)
+            if (TextContentPart is { } __value0)
             {
-                textContentPart?.Invoke(TextContentPart!);
+                textContentPart?.Invoke(__value0);
             }
-            else if (IsImageContentPart)
+            else if (ImageContentPart is { } __value1)
             {
-                imageContentPart?.Invoke(ImageContentPart!);
+                imageContentPart?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace SiliconFlow
                 Validate();
             }
 
-            if (IsTextContentPart)
+            if (TextContentPart is { } __value0)
             {
-                textContentPart?.Invoke(TextContentPart!);
+                textContentPart?.Invoke(__value0);
             }
-            else if (IsImageContentPart)
+            else if (ImageContentPart is { } __value1)
             {
-                imageContentPart?.Invoke(ImageContentPart!);
+                imageContentPart?.Invoke(__value1);
             }
         }
 
