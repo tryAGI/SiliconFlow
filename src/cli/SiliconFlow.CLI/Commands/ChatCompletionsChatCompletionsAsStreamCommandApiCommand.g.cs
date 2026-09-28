@@ -40,6 +40,8 @@ internal static partial class ChatCompletionsChatCompletionsAsStreamCommandApiCo
           Hidden = true,
       };
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"as-stream", @"Chat Completions
@@ -121,6 +123,7 @@ Creates a model response for the given chat conversation.");
                                         cancellationToken: cancellationToken).ConfigureAwait(false);
                                 }
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

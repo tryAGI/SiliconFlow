@@ -63,6 +63,8 @@ internal static partial class AudioCreateAudioTranscriptionsCommandApiCommand
                     static partial void CustomizeResponseFormatHints(Dictionary<string, CliFormatHint> hints);
 
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"create-audio-transcriptions", @"Create Audio Transcriptions
@@ -115,6 +117,7 @@ Creates an audio transcription.");
                                     FormatResponse,
                                     cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }
