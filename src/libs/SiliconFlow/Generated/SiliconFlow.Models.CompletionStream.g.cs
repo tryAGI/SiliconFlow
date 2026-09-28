@@ -42,8 +42,8 @@ namespace SiliconFlow
         /// <summary>
         ///
         /// </summary>
-        public global::SiliconFlow.CompletionEvent PickEvent() => IsEvent
-            ? Event!
+        public global::SiliconFlow.CompletionEvent PickEvent() => Event is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Event' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -102,9 +102,9 @@ namespace SiliconFlow
                 Validate();
             }
 
-            if (IsEvent && @event != null)
+            if (Event is { } __value0 && @event != null)
             {
-                return @event(Event!);
+                return @event(__value0);
             }
 
             return default(TResult);
@@ -122,9 +122,9 @@ namespace SiliconFlow
                 Validate();
             }
 
-            if (IsEvent)
+            if (Event is { } __value0)
             {
-                @event?.Invoke(Event!);
+                @event?.Invoke(__value0);
             }
         }
 
@@ -140,9 +140,9 @@ namespace SiliconFlow
                 Validate();
             }
 
-            if (IsEvent)
+            if (Event is { } __value0)
             {
-                @event?.Invoke(Event!);
+                @event?.Invoke(__value0);
             }
         }
 
