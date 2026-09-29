@@ -47,9 +47,9 @@ internal static partial class ImageImageGenerationCommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"generation", @"Image Generation
+        var command = new Command(commandName ?? @"generation", @"Image Generation
 Creates an image response for the given prompt.");
 
           command.Options.Add(Input);

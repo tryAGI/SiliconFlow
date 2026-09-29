@@ -41,9 +41,9 @@ internal static partial class ModelsRetrieveAListOfModelsCommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"retrieve-alist-of-models", @"Get Model List
+        var command = new Command(commandName ?? @"retrieve-alist-of-models", @"Get Model List
 Retrieve models information.");
                         command.Options.Add(Type);
                         command.Options.Add(SubType);
