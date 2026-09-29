@@ -65,9 +65,9 @@ internal static partial class UploadAudioVoiceCommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"upload-audio-voice", @"Upload Voice
+        var command = new Command(commandName ?? @"upload-audio-voice", @"Upload Voice
 上传用户预置音色，支持以 base64 编码或者文件形式上传，参考https://docs.siliconflow.cn/capabilities/text-to-speech#2-2)");
                         command.Options.Add(Model);
                         command.Options.Add(CustomName);

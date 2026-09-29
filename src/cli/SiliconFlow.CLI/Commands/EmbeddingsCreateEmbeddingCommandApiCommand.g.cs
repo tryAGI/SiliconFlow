@@ -68,9 +68,9 @@ internal static partial class EmbeddingsCreateEmbeddingCommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"create-embedding", @"Create Embeddings
+        var command = new Command(commandName ?? @"create-embedding", @"Create Embeddings
 Creates an embedding vector representing the input text.");
                         command.Options.Add(Model);
                         command.Options.Add(InputOption);

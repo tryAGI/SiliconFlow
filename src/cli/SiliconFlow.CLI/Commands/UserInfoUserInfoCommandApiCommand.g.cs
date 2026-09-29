@@ -31,9 +31,9 @@ internal static partial class UserInfoUserInfoCommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"user-info", @"获取用户信息
+        var command = new Command(commandName ?? @"user-info", @"获取用户信息
 获取用户信息，包括余额和状态");
 
 

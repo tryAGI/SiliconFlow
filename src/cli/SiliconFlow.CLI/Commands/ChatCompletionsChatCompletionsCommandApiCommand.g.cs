@@ -62,9 +62,9 @@ internal static partial class ChatCompletionsChatCompletionsCommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"chat-completions", @"Chat Completions
+        var command = new Command(commandName ?? @"chat-completions", @"Chat Completions
 Creates a model response for the given chat conversation.");
                         command.Options.Add(Messages);
                         command.Options.Add(Stop);                        command.Options.Add(ChatCompletionRequestOptionSetOptions.Model);

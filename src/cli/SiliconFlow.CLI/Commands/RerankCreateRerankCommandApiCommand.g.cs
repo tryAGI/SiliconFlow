@@ -88,9 +88,9 @@ internal static partial class RerankCreateRerankCommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"create-rerank", @"Create Rerank
+        var command = new Command(commandName ?? @"create-rerank", @"Create Rerank
 Creates a rerank request.");
                         command.Options.Add(Model);
                         command.Options.Add(Query);

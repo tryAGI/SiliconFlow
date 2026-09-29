@@ -65,9 +65,9 @@ internal static partial class AudioCreateAudioTranscriptionsCommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"create-audio-transcriptions", @"Create Audio Transcriptions
+        var command = new Command(commandName ?? @"create-audio-transcriptions", @"Create Audio Transcriptions
 Creates an audio transcription.");
                         command.Options.Add(File);
                         command.Options.Add(Filename);

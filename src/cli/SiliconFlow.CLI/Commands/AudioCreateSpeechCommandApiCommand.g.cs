@@ -52,9 +52,9 @@ internal static partial class AudioCreateSpeechCommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"create-speech", @"Create Speech
+        var command = new Command(commandName ?? @"create-speech", @"Create Speech
 从输入文本生成音频。根据输入的文本生成音频。接口生成的数据为音频的二进制数据，需要使用者自行处理。参考：https://docs.siliconflow.cn/capabilities/text-to-speech#5");
                         command.Options.Add(Model);
                         command.Options.Add(InputOption);

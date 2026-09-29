@@ -42,9 +42,9 @@ internal static partial class ChatCompletionsChatCompletionsAsStreamCommandApiCo
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"as-stream", @"Chat Completions
+        var command = new Command(commandName ?? @"as-stream", @"Chat Completions
 Creates a model response for the given chat conversation.");
                         command.Options.Add(Messages);
                         command.Options.Add(Stop);                        command.Options.Add(ChatCompletionRequestOptionSetOptions.Model);
