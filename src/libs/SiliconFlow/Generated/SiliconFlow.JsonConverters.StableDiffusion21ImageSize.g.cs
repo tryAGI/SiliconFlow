@@ -18,7 +18,7 @@ namespace SiliconFlow.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::SiliconFlow.StableDiffusion21ImageSizeExtensions.ToEnum(stringValue) ?? default;
+                        return global::SiliconFlow.StableDiffusion21ImageSizeExtensions.ToEnum(stringValue) ?? throw new global::System.Text.Json.JsonException($"Unknown value '{stringValue}' for global::SiliconFlow.StableDiffusion21ImageSize.");
                     }
 
                     break;

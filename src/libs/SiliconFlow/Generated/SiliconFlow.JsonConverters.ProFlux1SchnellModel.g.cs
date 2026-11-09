@@ -18,7 +18,7 @@ namespace SiliconFlow.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::SiliconFlow.ProFlux1SchnellModelExtensions.ToEnum(stringValue) ?? default;
+                        return global::SiliconFlow.ProFlux1SchnellModelExtensions.ToEnum(stringValue) ?? throw new global::System.Text.Json.JsonException($"Unknown value '{stringValue}' for global::SiliconFlow.ProFlux1SchnellModel.");
                     }
 
                     break;

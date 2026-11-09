@@ -18,7 +18,7 @@ namespace SiliconFlow.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::SiliconFlow.AudioRequestModelExtensions.ToEnum(stringValue) ?? default;
+                        return global::SiliconFlow.AudioRequestModelExtensions.ToEnum(stringValue) ?? throw new global::System.Text.Json.JsonException($"Unknown value '{stringValue}' for global::SiliconFlow.AudioRequestModel.");
                     }
 
                     break;

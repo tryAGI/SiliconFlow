@@ -18,7 +18,7 @@ namespace SiliconFlow.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::SiliconFlow.StableDiffusionXlBase10ModelExtensions.ToEnum(stringValue) ?? default;
+                        return global::SiliconFlow.StableDiffusionXlBase10ModelExtensions.ToEnum(stringValue) ?? throw new global::System.Text.Json.JsonException($"Unknown value '{stringValue}' for global::SiliconFlow.StableDiffusionXlBase10Model.");
                     }
 
                     break;
